@@ -1,0 +1,535 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-img-xs {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+.bg-img {
+  display: none;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.backCard {
+  background-image: url("images/bg-card-back.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 284px;
+  height: 155px;
+  position: relative;
+  top: -130px;
+  left: 80px;
+  z-index: 1;
+}
+
+.backNumber {
+  color: white;
+  font-size: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 35px;
+}
+
+.frontCard {
+  background-image: url("images/bg-card-front.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 284px;
+  height: 155px;
+  color: white;
+  position: relative;
+  top: -200px;
+  left: 25px;
+  padding-top: 15px;
+  z-index: 2;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  padding-left: 19px;
+}
+
+.bigCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: white;
+}
+
+.smallCircle {
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  border: 1px solid white;
+  margin-left: 11px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 39px;
+}
+
+.frontNumber {
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+.form,
+.formCompleted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -100px;
+}
+
+.center {
+  text-align: center;
+  display: none;
+}
+
+.cardName {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  width: 85%;
+  margin-top: 15px;
+}
+
+.cardholderName,
+.cardNumber {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: hsl(278, 68%, 11%);
+  font-weight: bold;
+}
+
+.cardNumber,
+.dateCvc {
+  margin-top: 22px;
+}
+
+.cardholderName input,
+.cardNumber input {
+  width: 310px;
+  height: 41px;
+  border-radius: 10px;
+  text-decoration: none;
+  outline: none;
+  border: 1px solid hsl(270, 3%, 87%);
+  padding-left: 15px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.numberError {
+  color: red;
+  display: none;
+}
+
+.dateCvc {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: hsl(278, 68%, 11%);
+  font-weight: bold;
+}
+
+.label {
+  display: flex;
+  gap: 25px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.monthYearError {
+  display: none;
+}
+
+.cvcError {
+  position: absolute;
+  top: 0;
+  right: 60px;
+  display: none;
+}
+
+.inputs input {
+  width: 70px;
+  height: 41px;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  outline: none;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 10px;
+}
+
+.inputs .cvc {
+  width: 160px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+input:focus {
+  background-color: hsl(300, 67%, 98%);
+  outline: 1.5px solid hsl(270, 3%, 87%);
+}
+
+.button,
+.continue {
+  width: 310px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: hsl(270, 3%, 87%);
+  background-color: hsl(278, 68%, 11%);
+  cursor: pointer;
+}
+
+.button:hover,
+.continue:hover {
+  background-color: hsl(278, 70%, 17%);
+}
+
+.thankyou {
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: hsl(278, 68%, 11%);
+  margin-top: 40px;
+}
+
+.added {
+  font-size: 18px;
+  color: hsl(279, 6%, 55%);
+  margin-top: 16px;
+}
+
+.continue {
+  margin-top: 48px;
+}
+
+@media all and (min-width: 540px) {
+  .bg-img {
+    display: block;
+    position: absolute;
+    width: 35%;
+    height: 100vh;
+    float: left;
+  }
+
+  .bg-img-xs {
+    display: none;
+  }
+
+  .backCard {
+    background-size: 80%;
+    z-index: 1;
+    top: 250px;
+    left: 100px;
+    width: 445px;
+    height: 243px;
+  }
+
+  .backNumber {
+    font-size: 18px;
+    padding-right: 130px;
+
+    padding-bottom: 50px;
+  }
+
+  .frontCard {
+    background-size: 80%;
+    top: -200px;
+    left: 100px;
+    width: 445px;
+    height: 243px;
+    padding-top: 27px;
+  }
+
+  .circle {
+    display: flex;
+    padding-left: 29px;
+  }
+
+  .bigCircle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .smallCircle {
+    width: 15px;
+    height: 15px;
+    margin-left: 17px;
+  }
+
+  .details {
+    margin-top: 45px;
+  }
+
+  .frontNumber {
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    padding-right: 80px;
+  }
+
+  .cardName {
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding-right: 80px;
+    padding-top: 5px;
+  }
+
+  .form,
+  .formCompleted {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 10px;
+    z-index: 10;
+  }
+
+  .cardholderName,
+  .cardNumber {
+    color: hsl(278, 89%, 39%);
+  }
+
+  .cardholderName input,
+  .cardNumber input {
+    width: 300px;
+    font-size: 22px;
+  }
+
+  .inputs {
+    width: 300px;
+    margin-top: 7px;
+  }
+
+  .inputs input {
+    width: 50px;
+  }
+
+  .inputs .cvc {
+    width: 100px;
+    padding-left: 20px;
+  }
+
+  .button,
+  .continue {
+    width: 300px;
+    font-size: 16px;
+    border: 1px solid hsl(278, 89%, 39%);
+  }
+
+  .label {
+    display: flex;
+    gap: 75px;
+  }
+
+  .dateCvc {
+    align-items: flex-end;
+    color: hsl(278, 89%, 39%);
+  }
+}
+
+@media all and (min-width: 940px) {
+  .backCard {
+    background-size: 100%;
+    z-index: 1;
+    top: 470px;
+    left: 100px;
+    width: 445px;
+    height: 243px;
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+  }
+
+  .backNumber {
+    font-size: 20px;
+    padding-right: 60px;
+    padding-bottom: 5px;
+  }
+
+  .frontCard {
+    background-size: 100%;
+    top: -54px;
+    left: 100px;
+    width: 445px;
+    height: 243px;
+    padding-top: 27px;
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+  }
+
+  .circle {
+    display: flex;
+    padding-left: 29px;
+  }
+
+  .bigCircle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .smallCircle {
+    width: 20px;
+    height: 20px;
+    margin-left: 17px;
+  }
+
+  .details {
+    margin-top: 65px;
+  }
+
+  .frontNumber {
+    font-size: 30px;
+    padding-right: 1px;
+  }
+
+  .cardName {
+    font-size: 22px;
+    margin-top: 20px;
+    padding-right: 10px;
+    padding-top: 5px;
+  }
+
+  .form,
+  .formCompleted {
+    align-items: flex-end;
+    padding-right: 40px;
+    position: relative;
+    bottom: 230px;
+    z-index: 10;
+    top: -200px;
+  }
+
+  .dateCvc {
+    align-items: flex-end;
+    color: hsl(278, 68%, 11%);
+  }
+
+  .cardholderName,
+  .cardNumber {
+    color: hsl(278, 68%, 11%);
+  }
+}
+
+@media all and (min-width: 1140px) {
+  .backCard {
+    background-image: url("images/bg-card-back.png");
+    background-size: 100%;
+    z-index: 1;
+    top: 470px;
+    left: 200px;
+    width: 445px;
+    height: 243px;
+  }
+
+  .frontCard {
+    top: -54px;
+    left: 100px;
+    width: 445px;
+    height: 243px;
+    padding-top: 27px;
+  }
+
+  .cardholderName input,
+  .cardNumber input {
+    width: 363px;
+    font-size: 22px;
+  }
+
+  .inputs {
+    width: 363px;
+    margin-top: 7px;
+  }
+
+  .inputs input {
+    width: 75px;
+  }
+
+  .inputs .cvc {
+    width: 180px;
+    padding-left: 20px;
+  }
+
+  .button,
+  .continue {
+    width: 363px;
+    font-size: 16px;
+    border: none;
+  }
+
+  .label {
+    display: flex;
+    gap: 55px;
+  }
+
+  .form,
+  .formCompleted {
+    top: -200px;
+  }
+}
+
+@media all and (min-width: 1350px) {
+  .backCard {
+    z-index: 1;
+    top: 470px;
+    left: 350px;
+    width: 445px;
+    height: 243px;
+  }
+
+  .frontCard {
+    top: -54px;
+    left: 255px;
+    width: 445px;
+    height: 243px;
+    padding-top: 27px;
+  }
+
+  .bg-img {
+    max-width: 600px;
+  }
+
+  .form,
+  .formCompleted {
+    padding-right: 165px;
+    top: -200px;
+  }
+}
+
+@media all and (min-width: 1650px) {
+  .form,
+  .formCompleted {
+    padding-right: 350px;
+    top: -200px;
+  }
+}
