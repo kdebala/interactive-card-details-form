@@ -78,6 +78,7 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- Mobile-first workflow
 - JavaScript
 
 <p align="right">(<a href="#top">back to top</a>)</p>
